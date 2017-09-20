@@ -17,11 +17,11 @@ WIN_COMBINATIONS = [
 
 # Won?
 def won?(board)
-  WIN_COMBINATIONS.each do |win_combo|
-    if win_combo.all? { |token| board[token] == "X" }
-      return win_combo
-    elsif win_combo.all? { |token| board[token] == "O" }
-      return win_combo
+  WIN_COMBINATIONS.each do |combo|
+    if win_combo.all? { |value| board[value] == "X" }
+      return combo
+    elsif win_combo.all? { |value| board[value] == "O" }
+      return combo
     else
       return false
     end
