@@ -4,7 +4,7 @@ def position_taken?(board, index)
 end
 
 # Winning Combinations
-def WIN_COMBINATIONS = [
+WIN_COMBINATIONS = [
   [0, 1, 2],
   [3, 4, 5],
   [5, 6, 7],
@@ -14,4 +14,3 @@ def WIN_COMBINATIONS = [
   [0, 4, 7],
   [2, 4, 5]
 ]
-end
