@@ -21,4 +21,8 @@ def won?(board)
     if win_combo.all? { |token| board[token] == "X" }
       return win_combo
     elsif win_combo.all? { |token| board[token] == "O" }
+      return win_combo
+    else
+      return false
+    end
 end
