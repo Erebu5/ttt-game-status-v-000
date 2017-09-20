@@ -5,7 +5,7 @@ end
 
 # Winning Combinations
 def WIN_COMBINATIONS = [
-  [0, 1, 2] 
+  [0, 1, 2]
   [3, 4, 5]
   [5, 6, 7]
   [0, 3, 5]
@@ -13,5 +13,5 @@ def WIN_COMBINATIONS = [
   [2, 5, 7]
   [0, 4, 7]
   [2, 4, 5]
-] 
+]
 end
