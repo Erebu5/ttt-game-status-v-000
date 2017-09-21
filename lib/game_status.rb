@@ -3,7 +3,7 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
-# WINNING COMBOS
+# POSSIBLE WINNING COMBINATIONS
 WIN_COMBINATIONS = [
   [ 0, 1, 2 ], # top row
   [ 3, 4, 5 ], # middle row
@@ -15,7 +15,7 @@ WIN_COMBINATIONS = [
   [ 2, 4, 6 ]  # diagonal bottom-top
 ]
 
-# WON?
+# WINNING COMBO?
 def won?(board)
   WIN_COMBINATIONS.each do |combo|
     win_index_1 = combo[0]
@@ -35,7 +35,7 @@ def won?(board)
   false
 end
 
-# FULL?
+# BOARD FULL
 def full?(board)
   if board.all? {|value| value == "X" || value == "O"}
     return true
@@ -44,7 +44,7 @@ def full?(board)
   end
 end
 
-# DRAW?
+# DRAW
 def draw?(board)
   if won?(board) == false && board.all? {|value| value == "X" || value =="O"}
     return true
@@ -53,7 +53,7 @@ def draw?(board)
   end
 end
 
-# GAME OVER?
+# GAME OVER
 def over?(board)
   if won?(board) != false || full?(board) == true || draw?(board) == true
     return true
@@ -61,3 +61,5 @@ def over?(board)
     false
   end
 end
+
+# THE WINNER IS
