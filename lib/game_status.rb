@@ -64,12 +64,7 @@ end
 
 # THE WINNER IS...
 def winner(board)
-  combo = won?(board)
-  if won?(board) == true && board.all? {|value| board[value] == "X"}
-    return "Player X is the winner!"
-  elsif won?(board) == true && board.all? {|value| board[value] == "O"}
-    return "Player O is the winner!"
-  else
-    return nil
+  if won?(board) != false
+    return "Player #{board[won?(board)[0]]} is the winner!"
   end
 end
