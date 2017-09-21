@@ -44,7 +44,7 @@ def full?(board)
   end
 end
 
-# DRAW
+# GAME DRAW
 def draw?(board)
   if won?(board) == false && board.all? {|value| value == "X" || value =="O"}
     return true
@@ -62,4 +62,4 @@ def over?(board)
   end
 end
 
-# THE WINNER IS
+# THE WINNER IS...
